@@ -2,7 +2,7 @@
 
 ## Objective
 
-Technology is rapidly driving a wed between the poor and prosperous. The
+Technology is rapidly driving a wedge between the poor and prosperous. The
 Scarlett School is determine to bridge this gap to anyone who is poor and
 determined to learn. The poor generally work much harder than the wealthy, so
 courses are designed to be completed at the pace of the learner, not the

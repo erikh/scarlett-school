@@ -34,7 +34,7 @@ arguments.
 
 ## Meta-Characters
 
-Since you can use the shell to write programs, the creators of teh shell used
+Since you can use the shell to write programs, the creators of the shell used
 special symbols, called "meta-characters", to make programming easier by typing
 less. These characters are nearly all non-alphanumeric (meaning, not a-z, A-Z,
 or 0-9) characters, including nearly all math symbols and even things like

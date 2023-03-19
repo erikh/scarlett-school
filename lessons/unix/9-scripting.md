@@ -99,7 +99,7 @@ echo "x is $x"
 ## Command Substitution
 
 In one case, you can use commands like variables. To do this, use backticks
-` \`` or the parentheses in a variable like so:   `$(echo foo)`. This will return
+\`\` or the parentheses in a variable like so: `$(echo foo)`. This will return
 "foo" to be used like a piece of data. Example: (`expr` is a command to
 evaluate math)
 
@@ -120,7 +120,7 @@ can print it by typing:
 
 env
 
-These values are always available some don't change, others, like `$PWD`,
+These values are always available; some don't change, others, like `$PWD`,
 change on events like when you change the directory. You can also add your own:
 
 export MYENV=hi
@@ -157,7 +157,7 @@ echo "special!" # pretty neat, eh?
 
 What does this program do? How does it work?
 
-```
+```bash
 #!/bin/sh
 
 for i in $(cat /etc/passwd)

@@ -20,7 +20,7 @@ You can see the user/group relationship by looking at files with `ls -l`
 (lower-case L), for a "long" listing. This shows the permissions:
 
      $ ls -l
-     -rwxr-x---   erikh   users   a_file.txt
+     -rwxr-x---   1 erikh erikh    1288 Mar 18 13:32 a_file.txt
 
 These detail the types of permissions, the "owner" of the file, the "group
 owner" of the file, and the name of the file, respectively. The user who "owns"
@@ -32,11 +32,12 @@ this file is "erikh". The group is the "users" group, and the filename is
 The first `-` is for special permissions and file types. You'll notice
 directories get a `d` here, but other things exist as well.
 
-The second section is the "owner" permissions. The `r` means "readable", the
-`w` means "writable", and the `x` means "executable". These permissions are
-repeated for "group" and "other", where "group" is the permissions for all
-users in the named group, and "other" is for everyone who does not fit into the
-other two categories. A `-` means there is no permission.
+The second section, which is the next 3 characters, is the "owner" permissions.
+The `r` means "readable", the `w` means "writable", and the `x` means
+"executable". These permissions are repeated for the 3-character sections of
+"group" and "other", where "group" is the permissions for all users in the
+named group, and "other" is for everyone who does not fit into the other two
+categories. A dash (`-`) means there is no permission.
 
 There are several commands which modify the ownership and permissions of a file:
 
@@ -74,7 +75,7 @@ none. Then, put the 3 numbers together in the proper order for `chmod`.
 ## Different Users
 
 To use Unix effectively, you will need to be different users at different
-times. The most comment switch you will make is to the administrator account,
+times. The most common switch you will make is to the administrator account,
 otherwise called "root".
 
 Each account has a unique User ID, or UID for short. To see your UID, you can
@@ -83,7 +84,7 @@ use the `id` command like so:
     $ id -u
     1000
 
-To see other user activity on teh system, you can use `w` or `last` to see who
+To see other user activity on the system, you can use `w` or `last` to see who
 is online, and a log of who logged in, respectively.
 
 Some other users are present to manage system facilities, you can review them
@@ -98,7 +99,8 @@ There is also one for groups:
 Note that on modern systems, the actual "password" for the accounts is in a
 separate file only accessible by "root", called `/etc/shadow`. If an account
 does not have a password, it means you can't normally log into it. You have to
-access it indirectly.
+access it indirectly. Even though you can only access the real passwords as
+"root", they are encrypted in a special way so that they cannot be read.
 
 You can do this by using the "switch user" or `su` command. It chooses "root"
 by default, but you can change it (see the manual pages for how). Another, more
@@ -110,7 +112,7 @@ doing the switching (e.g., _your_ password). They are somewhat different tools;
 `sudo` is much more complicated to configure, but easier to use on the surface.
 
 To change your password, use the `passwd` command. To modify group memberships,
-look at `groupmod`.
+look at `gpasswd`.
 
 ## Assignment
 

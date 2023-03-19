@@ -12,7 +12,7 @@ these compartments is called a "directory". The base directory is called the
 "root", much like the roots of a tree. It is denoted by a single forward slash:
 `/` -- directories all fall underneath the root directory, to the right.
 
-A location wiht all the directories from the root that point at the place you
+A location with all the directories from the root that point at the place you
 want to look, is called a "path". The path is constructed of the root,
 directories, and a filename (unless a directory is what you're looking for).
 Here is an example:

@@ -30,9 +30,19 @@ versions of Unix. None are created alike.
   "kernel".
 - `/home`: Home directory for user accounts. This is your personal storage
   space. The directory structure is `/home/<username>`.
-- `/var`: variable data that is *not* temporary. For example, local email (yes,
+- `/var`: variable data that is _not_ temporary. For example, local email (yes,
   all Unix systems all have email support) is stored in `/var/spool/mail`, and
   log files for the operating system are stored in `/var/log`.
 
 As you can see, there are quite a few, and this is not an exhaustive list. It
 pays to learn your system.
+
+## Assignment:
+
+You can count the number of files and directories in a directory like so:
+
+```bash
+ls -1 <directory name> | wc -l
+```
+
+How many files & directories do you have in `/bin`? How about `/dev`?

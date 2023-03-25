@@ -18,7 +18,7 @@ the switches we've seen before; they **are not** proceded with a dash (`-`).
 The flags are:
 
 - `a`: all processes (the default is just the shell's processes)
-- `u`: display username that owns the process
+- `u`: display all processes that this user owns
 - `x`: "extended output" (see manual)
 - `w`: "wide" output (kind of like extended; can be repeated)
 
@@ -49,3 +49,9 @@ replace it with a job control number, too.
     $ kill %1
 
 For example.
+
+## Assignment
+
+Start a `cat` process in the background, list its job control number, and then
+kill the process. Explain the commands you used to do this, from the launching
+of `cat` forward.

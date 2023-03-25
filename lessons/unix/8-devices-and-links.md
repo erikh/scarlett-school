@@ -81,3 +81,10 @@ result:
 
 - Hard links cannot span mount points
 - Hard links may not be directories
+
+## Assignment
+
+Create an empty file with `echo foo >file.txt`, then create a symbolic link to
+it named `file2.txt`. Then, rewrite the file with `echo bar >file.txt`, and
+`cat file2.txt`. Describe what happened in your own words, and explain why,
+too. Then do it with a hard link; did anything change? Why?

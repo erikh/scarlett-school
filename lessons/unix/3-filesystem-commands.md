@@ -21,7 +21,7 @@ be typed easier. Let's look at a few commands in this lesson.
   to learn them all.
 - `mv`: Move file or directory. `mv` is how you move files and directories to
   other parts of the filesystem, or rename them in place, too.
-- `cp`: Copy file. Make a copy of hte file, which takes the same amount of
+- `cp`: Copy file. Make a copy of the file, which takes the same amount of
   space on disk. If `-R` is provided, it works "recursively", similar to `rm`,
   copying whole directory trees.
 - `pwd`: Print Working Directory. This just tells you where you are at. Handy

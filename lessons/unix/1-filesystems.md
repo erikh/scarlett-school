@@ -5,7 +5,7 @@ with files as a basic unit for most transactions within the operating system:
 something as simple as editing a document, or ejecting a thumb drive, all deals
 with files. So let's see how they work.
 
-A filesystem in unix is a single entity. Unlike windows where there are
+A filesystem in Unix is a single entity. Unlike windows where there are
 different "drives", all "drives" are on the same filesystem in Unix. The
 filesystem is arranged like a tree of compartments full of files. Each one of
 these compartments is called a "directory". The base directory is called the
@@ -15,7 +15,9 @@ these compartments is called a "directory". The base directory is called the
 A location with all the directories from the root that point at the place you
 want to look, is called a "path". The path is constructed of the root,
 directories, and a filename (unless a directory is what you're looking for).
-Here is an example:
+The path is "case-sensitive", meaning that it treats upper-case letters (like
+"D") and lower-case letters (like "d") differently; meaning `Desktop` and
+`desktop` are two different directories or files. Here is an example:
 
     /foo/bar/baz.txt
 

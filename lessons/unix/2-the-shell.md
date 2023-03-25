@@ -56,7 +56,7 @@ directory:
 ```
 for i in *
 do
-  mv $i $i.foo
+  echo $i.foo
 done
 ```
 
@@ -64,7 +64,7 @@ Since a semicolon (`;`) is equivalent to telling the shell enter was hit in
 most cases, you can also do:
 
 ```
-for i in *; do mv $i $i.foo; done
+for i in *; do echo $i.foo; done
 ```
 
 And it will do the same thing in one line. Neat, eh?

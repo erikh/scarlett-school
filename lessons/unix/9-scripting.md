@@ -131,7 +131,7 @@ behavior when your environment is altered. Watch out!
 ## Exit Status
 
 All programs have an exit code, or exit status. It is available by examining
-`$?`, right after execution`. A `0` exit code indicates success, while non-zero
+`$?`, right after execution. A `0` exit code indicates success, while non-zero
 exit codes indicate some form of failure. Depending on the code, it may
 indicate different failures. In boolean operations, 0 is true, and non-zero is
 false.

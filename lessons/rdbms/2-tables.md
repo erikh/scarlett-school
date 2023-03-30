@@ -14,9 +14,10 @@ as we'll see later.
 As previously mentioned, tables consist of rows and columns. Columns are named,
 live on the vertical axis, and describe the different kinds of data in the
 _rows_, which live on the horizontal axis. Rows are _keyed_ by one or several
-columns, which means that they are looked up. Each row is an expression of the
-columns in the schema. Row members may either be the data type expressed in the
-column, such as a number or text, or _NULL_, which means that there is no data.
+columns, which means that is how they are looked up. Each row is an expression
+of the columns in the schema. Row members may either be the data type expressed
+in the column, such as a number or text, or _NULL_, which means that there is
+no data.
 
 Example:
 

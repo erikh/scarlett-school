@@ -52,13 +52,13 @@ reasons that we will see later.
 
 Given the following two tables:
 
-| id  | name     |
-| --- | -------- |
-| 1   | Erik     |
-| 2   | Sean     |
-| 3   | Scarlett |
-| 4   | Tom      |
-| 5   | Darcy    |
+| `id` | `name`   |
+| ---- | -------- |
+| 1    | Erik     |
+| 2    | Sean     |
+| 3    | Scarlett |
+| 4    | Tom      |
+| 5    | Darcy    |
 
 | `name_id` | `parent_id` |
 | --------- | ----------- |

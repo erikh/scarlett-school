@@ -60,12 +60,14 @@ Given the following two tables:
 | 3    | Scarlett |
 | 4    | Tom      |
 | 5    | Darcy    |
+| 6    | Max      |
 
 | `name_id` | `parent_id` |
 | --------- | ----------- |
 | 2         | 4           |
 | 2         | 5           |
 | 3         | 1           |
+| 3         | 6           |
 
 Indicate how you might determine a family lineage, and then describe who is
 related to whom.

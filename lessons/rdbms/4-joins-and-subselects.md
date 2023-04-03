@@ -57,9 +57,7 @@ As mentioned, an inner join is a join that compares rows in two tables based on
 the criteria, and returns those that match.
 
 But, we've already looked at the `WHERE` clause in `SELECT` queries. How is
-this different? The inner join compares _all rows in both tables to each other,
-and returns those that match_. You can, and will often use `WHERE` to further
-scope your joins.
+this different? The inner join compares _all rows in both tables to each other, and returns those that match_. You can, and will often use `WHERE` to further scope your joins.
 
 If we examine the schema of the data in the SQL script provided to you with the
 SQLite-specific `.schema` statement (no `;` is needed for the special
@@ -157,7 +155,7 @@ value is _NULL_, the special value that means _nothing_.
 So what's the difference between a `LEFT OUTER JOIN` and a `RIGHT OUTER JOIN`?
 Well, that simply indicates which table is the _authority_, and what records
 will be taken when they don't match. Let's look at this twice, for
-completenesses sake. First, let's write our `LEFT OUTER JOIN` as a `RIGHT OUTER
+completeness sake. First, let's write our `LEFT OUTER JOIN` as a `RIGHT OUTER
 JOIN` and see the difference:
 
 ```sql
@@ -210,9 +208,10 @@ sense to use a sub-select here to keep things clearer (for some value of
 SELECT a.name AS name, b.name AS parent
 FROM
   people AS a,
-  (SELECT person_id, parent_id, d.name
-  FROM parents AS c
-    INNER JOIN people AS d ON c.parent_id = d.id
+  (
+   SELECT person_id, parent_id, d.name
+   FROM parents AS c
+     INNER JOIN people AS d ON c.parent_id = d.id
   ) AS b
 WHERE a.id = b.person_id
 ```
@@ -220,8 +219,8 @@ WHERE a.id = b.person_id
 Let's break down what is happening, in order:
 
 - The sub-select (the part in the parentheses) runs first. It selects all the
-  parents that have a name, using an `INNER JOIN`, from the `parents` table. It
-  puts this in a temporary place called `b`.
+  parents that have a name, using an `INNER JOIN`, from the `parents` table
+  against the `people` table. It puts this in a temporary place called `b`.
 - The outer select runs. It selects all people, and uses the `WHERE` clause to
   only match names which match a person in `b`'s `person_id` field,
   constraining the view to only those people who have parents.

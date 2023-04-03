@@ -66,12 +66,9 @@ in the link. The operating system handles this specially, and transparently. To
 use any kind of link, we use the `ln` command. To use a symbolic link, you must
 provide the `-s` flag, like so:
 
-    $ ln -s to from
+    $ ln -s from to
 
-Note how the target comes first, and the origin comes second. This trips a lot
-of people up!
-
-Hard links are different. Each filesystem's mount point has a special table of
+Hard links are different. Each file system's mount point has a special table of
 numbers that correspond to the data on your computer's physical disk. These
 numbers are mapped to the name of the files in your filesystem. These numbers
 are called "inodes", and it is not important how they work.
@@ -85,6 +82,6 @@ result:
 ## Assignment
 
 Create an empty file with `echo foo >file.txt`, then create a symbolic link to
-it named `file2.txt`. Then, rewrite the file with `echo bar >file.txt`, and
-`cat file2.txt`. Describe what happened in your own words, and explain why,
-too. Then do it with a hard link; did anything change? Why?
+it named `file2.txt`. Then, `rm` and rewrite the file with `echo bar
+>file.txt`, and `cat file2.txt`. Describe what happened in your own words, and
+explain why, too. Then do it with a hard link; did anything change? Why?

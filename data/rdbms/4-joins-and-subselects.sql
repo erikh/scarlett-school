@@ -4,6 +4,11 @@ create table people (
   age integer not null
 );
 
+create table phones (
+  person_id integer not null primary key,
+  phone varchar
+);
+
 create table addresses (
   id integer not null primary key autoincrement,
   address varchar not null,
@@ -11,7 +16,7 @@ create table addresses (
 );
 
 create table people_addresses (
-  person_id integer not null,
+  person_id integer not null primary key,
   address_id integer not null
 );
 
@@ -34,6 +39,11 @@ insert into people (name, age) values
   ('Lynne G', 64),
   ('Rex H', 69);
 
+insert into phones (person_id, phone) values
+  (1, '555-867-5309'),
+  (10, '123-456-7890'),
+  (5, '555-123-4567');
+
 insert into addresses (address, state) values
   ('1600 Pennsylvania Avenue', 'DC'),
   ('123 Superman Way', 'CA'),
@@ -45,19 +55,19 @@ insert into people_addresses (person_id, address_id) values
   (2, 3),
   (3, 3),
   (4, 2),
-  (4, 2),
   (5, 4),
-  (6, 1),
-  (7, 2),
+  (6, 4),
+  (7, 1),
   (8, 2),
   (9, 3),
-  (10, 1),
-  (11, 1);
+  (10, 4),
+  (11, 1),
+  (12, 1);
 
 insert into parents (person_id, parent_id) values
-  (1, 10),
   (1, 11),
+  (1, 12),
   (4, 8),
-  (4, 7),
-  (5, 9),
-  (6, 1);
+  (4, 9),
+  (5, 10),
+  (7, 1);

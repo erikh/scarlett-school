@@ -44,7 +44,7 @@ the most common, and easiest to use.
 Spreadsheets, such as Microsoft Excel, or Google Sheets, are also databases,
 just more visual, and less formal. You can still perform calculations on the
 data related to what "cell" it lives in, such as "A10" or "B5", calculate sums
-of several cells by using the `:sum(A10:A15)` functionality, for example. These
+of several cells by using the `=sum(A10:A15)` functionality, for example. These
 are also database principles at work.
 
 The databases we will be discussing are somewhat more advanced, and very

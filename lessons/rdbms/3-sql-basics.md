@@ -105,7 +105,7 @@ _NULL_. Note that there is no trailing comma after the `phone` definition.
 INSERT INTO statements insert a _new_ row into the table. They have the syntax:
 
 ```sql
-INSERT INTO <tablename> (<columns, separated by commas>) values (<values, separated by commas>);
+INSERT INTO <tablename> (<columns, separated by commas>) VALUES (<values, separated by commas>);
 ```
 
 The values count must be the same as the columns count, and `varchar` types
@@ -173,7 +173,7 @@ Returns "Joe". Note that we did not use `=` here. You cannot "compare" with
 _NULL_, only identify it. This is an easy mistake to make when you're new, and
 has serious consequences in real environments.
 
-### UPDATE TABLE
+### UPDATE
 
 UPDATE statements modify existing records. UPDATE statements are two parts: a
 series of update commands, and a "constraint" which tells it what to update.
@@ -183,7 +183,7 @@ supplied, _it will update the entire table_.
 Syntax:
 
 ```sql
-UPDATE TABLE <tablename> SET <update statements, see below> <constraints>;
+UPDATE <tablename> SET <update statements, see below> <constraints>;
 ```
 
 The update statements are a set of `column = value` pairs to update. Example:
@@ -202,7 +202,7 @@ WHERE id = 2;
 #### Full Example:
 
 ```sql
-UPDATE TABLE people SET name = 'Bob', address = '123 Smith Ave.' WHERE id = 2;
+UPDATE people SET name = 'Bob', address = '123 Smith Ave.' WHERE id = 1;
 ```
 
 ### DELETE FROM

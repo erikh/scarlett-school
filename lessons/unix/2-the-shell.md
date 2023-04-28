@@ -28,9 +28,9 @@ parameter, use single or double quotes, 'like so'.
 the screen. Our program, `cat`, is the command, and the filenames are the
 arguments.
 
-- `cat foo.txt`
-- `cat bar.txt foo.txt`
-- `cat 'file with spaces.txt'`
+-   `cat foo.txt`
+-   `cat bar.txt foo.txt`
+-   `cat 'file with spaces.txt'`
 
 ## Meta-Characters
 
@@ -50,8 +50,8 @@ well. Sometimes this knowledge can be very handy!
 
 An example of a program to use at the CLI (command-line interface,
 abbreviated), is a "program" that adds the file extension (the part of the end
-of a file name to determine what type it is) `.foo` to each file in the working
-directory:
+of a file name to determine what type it is) `.foo` to each file, then prints
+it without renaming it, in the working directory:
 
 ```
 for i in *
@@ -73,7 +73,7 @@ And it will do the same thing in one line. Neat, eh?
 
 For each line, indicate the command and each parameter. Number the parameters.
 
-- `cat foo.txt`
-- `cat bar.wav foo.txt`
-- `cat 'i love the shell.txt' foo.txt`
-- `foo bar.goo quux.baz`
+-   `cat foo.txt`
+-   `cat bar.wav foo.txt`
+-   `cat 'i love the shell.txt' foo.txt`
+-   `foo bar.goo quux.baz`

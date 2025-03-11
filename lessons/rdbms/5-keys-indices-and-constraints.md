@@ -16,9 +16,9 @@ Keys by and large cannot be _NULL_, as there would be no way to look them up. Th
 
 A primary key is the "primary" way to look something up. Whether this be a user ID or the identifier for a piece of data, it is always the one record you can use to look something specific up. As a result:
 
--   Primary keys are automatically unique in the context of the table, meaning there cannot be two of them in separate rows.
--   Primary keys cannot be _NULL_.
--   There can only be one primary key in a table.
+- Primary keys are automatically unique in the context of the table, meaning there cannot be two of them in separate rows.
+- Primary keys cannot be _NULL_.
+- There can only be one primary key in a table.
 
 Generally, primary keys are usually only one column, but some databases allow the primary key to be a combination of multiple columns, called a "composite primary key". I don't recommend using composite primary keys without good reason. If you must, please consult your database's documentation for further details.
 
@@ -93,9 +93,9 @@ An `EXPLAIN` plan is simply the way the database intends to look up your query. 
 
 Look at the database documentation on https://sqlite.org and provide:
 
--   A `CREATE TABLE` statement for each scenario:
-    -   Create a primary key for your table
-    -   Create a unique key that exists alongside the primary key. Insert two of the same thing into it and see what happens.
-    -   Create a "composite" unique key (more than one column). This may require different syntax, so be aware! Try to insert things into it to verify.
-    -   Create two tables, with a foreign key joining them. Insert things into the table taking the foreign key, without appropriate data in the other table, to test your theories.
--   Create an index for one of your tables. Then play with select queries that use the index, and show the difference in the `EXPLAIN` plans.
+- A `CREATE TABLE` statement for each scenario:
+    - Create a primary key for your table
+    - Create a unique key that exists alongside the primary key. Insert two of the same thing into it and see what happens.
+    - Create a "composite" unique key (more than one column). This may require different syntax, so be aware! Try to insert things into it to verify.
+    - Create two tables, with a foreign key joining them. Insert things into the table taking the foreign key, without appropriate data in the other table, to test your theories.
+- Create an index for one of your tables. Then play with select queries that use the index, and show the difference in the `EXPLAIN` plans.

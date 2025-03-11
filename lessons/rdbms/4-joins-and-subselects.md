@@ -6,7 +6,7 @@ We briefly covered joins in the assignment from lesson 2: when you related the p
 
 ## Preparation for this Lesson
 
-Download [this file](/data/rdbms/4-joins-and-subselects.sql). Then, import it into sqlite:
+Download [this file](/4-joins-and-subselects.sql). Then, import it into sqlite:
 
 ```bash
 sqlite test.db < 4-joins-and-subselects.sql
@@ -24,8 +24,8 @@ Joins always consist of only _two_ tables. If you need to compare more than two 
 
 There are several types of joins:
 
--   Inner Join: This is a join that compares rows in two tables based on the criteria, and any criteria that matches will be returned.
--   Outer Join: This is a join that compares rows in two tables based on the criteria, and any rows that match the criteria are returned, but _also_ rows that matched no criteria are also returned. These can be done associative to the "left" or "right" table, which just refers to the order in which the tables were provided to the SQL statement.
+- Inner Join: This is a join that compares rows in two tables based on the criteria, and any criteria that matches will be returned.
+- Outer Join: This is a join that compares rows in two tables based on the criteria, and any rows that match the criteria are returned, but _also_ rows that matched no criteria are also returned. These can be done associative to the "left" or "right" table, which just refers to the order in which the tables were provided to the SQL statement.
 
 There are other, more subtle types of joins -- for example a _cross join_ or _natural join_ -- which we will not cover in here. Please refer to the manual at https://sqlite.org if you're more interested in these later.
 
@@ -141,12 +141,12 @@ WHERE a.id = b.person_id;
 
 Let's break down what is happening, in order:
 
--   The sub-select (the part in the parentheses) runs first. It selects all the parents that have a name, using an `INNER JOIN`, from the `parents` table against the `people` table. It puts this in a temporary place called `b`.
--   The outer select runs. It selects all people, and uses the `WHERE` clause to only match names which match a person in `b`'s `person_id` field, constraining the view to only those people who have parents.
+- The sub-select (the part in the parentheses) runs first. It selects all the parents that have a name, using an `INNER JOIN`, from the `parents` table against the `people` table. It puts this in a temporary place called `b`.
+- The outer select runs. It selects all people, and uses the `WHERE` clause to only match names which match a person in `b`'s `person_id` field, constraining the view to only those people who have parents.
 
 That's it!
 
 ## Assignment
 
--   Explain the difference between an `INNER JOIN` and an `OUTER JOIN` using your own words.
--   How would you write the sub-select with multiple joins? Is it even possible?
+- Explain the difference between an `INNER JOIN` and an `OUTER JOIN` using your own words.
+- How would you write the sub-select with multiple joins? Is it even possible?

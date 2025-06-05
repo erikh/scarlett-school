@@ -16,9 +16,9 @@ The first word in the input to a shell is called a "command", and any words that
 
 `cat` is a program that accepts filenames as parameters, then prints them to the screen. Our program, `cat`, is the command, and the filenames are the arguments.
 
--   `cat foo.txt`
--   `cat bar.txt foo.txt`
--   `cat 'file with spaces.txt'`
+- `cat foo.txt`
+- `cat bar.txt foo.txt`
+- `cat 'file with spaces.txt'`
 
 ## Meta-Characters
 
@@ -30,7 +30,7 @@ Shell "scripts" are programs that are stored in files that use the shell automat
 
 An example of a program to use at the CLI (command-line interface, abbreviated), is a "program" that adds the file extension (the part of the end of a file name to determine what type it is) `.foo` to each file, then prints it without renaming it, in the working directory:
 
-```
+```bash
 for i in *
 do
   echo $i.foo
@@ -39,7 +39,7 @@ done
 
 Since a semicolon (`;`) is equivalent to telling the shell enter was hit in most cases, you can also do:
 
-```
+```bash
 for i in *; do echo $i.foo; done
 ```
 
@@ -49,7 +49,7 @@ And it will do the same thing in one line. Neat, eh?
 
 For each line, indicate the command and each parameter. Number the parameters.
 
--   `cat foo.txt`
--   `cat bar.wav foo.txt`
--   `cat 'i love the shell.txt' foo.txt`
--   `foo bar.goo quux.baz`
+- `cat foo.txt`
+- `cat bar.wav foo.txt`
+- `cat 'i love the shell.txt' foo.txt`
+- `foo bar.goo quux.baz`

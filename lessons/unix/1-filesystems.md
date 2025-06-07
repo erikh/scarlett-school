@@ -20,33 +20,36 @@ An absolute path never takes the working directory into account. It always start
 
 A relative path, on the other hand, _combines_ with the working directory to create a new path. It uses special syntax to assist with this:
 
--   `..` (two dots) means "up one directory"
--   `.` (one dot) means "within the current directory"
+- `..` (two dots) means "up one directory"
+- `.` (one dot) means "within the current directory"
 
 The special syntax is still delimited by forward slashes, just like a real directory.
 
 ## Examples
 
+This table represents a number of takes on the following working directory. It indicates if the original path is relative or absolute, and when it is relative, what the absolute path computed from the relative path looks like.
+
 The working directory: `/foo/bar`
 
--   `/quux/baz/frobnik.txt` - absolute path
--   `/foo/bar/loop.wav` - absolute path
--   `/boo/hiss.foo` - absolute path
-
--   `../quux/file.nod` - relative path, `/foo/quux/file.nod`
--   `./baz.html` - relative path, `/foo/bar/baz.html`
--   `../../other/file.txt` - relative path, `/other/file.txt`
+| Original Path           | Absolute or Relative | Resolved Path        |
+| ----------------------- | -------------------- | -------------------- |
+| `/quux/baz/frobnik.txt` | absolute             | already resolved     |
+| `/foo/bar/loop.wav`     | absolute             | already resolved     |
+| `/boo/hiss.foo`         | absolute             | already resolved     |
+| `../quux/file.nod`      | relative             | `/foo/quux/file.nod` |
+| `./baz.html`            | relative             | `/foo/bar/baz.html`  |
+| `../../other/file.txt`  | relative             | `/other/file.txt`    |
 
 ## Assignment
 
 Indicate whether the following paths:
 
--   Are Absolute
--   If relative, what the absolute path is
+- Are Absolute
+- If relative, what the absolute path is
 
 Working directory: `/quux`
 
--   `/foo/bar/hi.txt`
--   `/quux/bug/nope.foo`
--   `../bar/baz.wav`
--   `./foo.txt`
+- `/foo/bar/hi.txt`
+- `/quux/bug/nope.foo`
+- `../bar/baz.wav`
+- `./foo.txt`
